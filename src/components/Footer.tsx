@@ -1,11 +1,12 @@
 import { siteConfig, githubProfileUrl } from "../config";
+import logo from "../logo.svg";
 
 export function Footer() {
   return (
     <footer className="border-t border-line bg-panel/40">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 md:flex-row">
         <div className="flex items-center gap-3">
-          <img src="./logo.svg" alt="Taki logo" className="h-8 w-8" />
+          <img src={logo} alt="Taki logo" className="h-8 w-8" />
           <div>
             <p className="font-display text-xl font-bold text-ivory">
               {siteConfig.name}
