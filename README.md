@@ -42,3 +42,14 @@ latest public repositories.
 | `bun run dev`    | Start dev server (hot reload)  |
 | `bun run build`  | Production build -> `dist/`    |
 | `bun run start`  | Serve the production build     |
+
+## Deploying
+
+The site is deployed on **GitHub Pages** and auto-deploys on every push to `main`
+via the workflow in `.github/workflows/deploy.yml`:
+
+```bash
+git push origin main   # that's it — GitHub builds and publishes
+```
+
+Live URL: https://takiblu.github.io/taki/
