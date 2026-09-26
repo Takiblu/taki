@@ -32,7 +32,7 @@ export function Navbar() {
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <a href="#home" className="group flex items-center gap-3">
           <img
-            src="./logo."
+            src="./logo.svg"
             alt="Taki logo"
             className="h-9 w-9 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105"
           />
