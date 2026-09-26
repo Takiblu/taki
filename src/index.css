@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Typography ───────────────────────────────────────
+     Primary: Edu QLD Beginner (handwriting)
+     Accent:  JetBrains Mono (dev / terminal flourishes) */
+  --font-sans: "Edu QLD Beginner", "Segoe Print", "Comic Sans MS", cursive;
+  --font-display: "Edu QLD Beginner", "Segoe Print", "Comic Sans MS", cursive;
+
+  /* ── Pitch Black palette ────────────────────────────── */
+  --color-ink: #0a0a0a; /* pitch black — page background   */
+  --color-bronze: #8c501e; /* warm bronze — structure, hover */
+  --color-gold: #d8903b; /* warm amber — primary accent    */
+  --color-ivory: #f0e8d8; /* off-white — primary text       */
+  --color-skin: #c88e63; /* warm skin tone — muted text    */
+
+  /* Derived warm near-blacks for surfaces & borders */
+  --color-panel: #100d09;
+  --color-card: #16120c;
+  --color-line: #2a2118;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ink);
+}
+
+::selection {
+  background: rgb(216 144 59 / 0.45);
+  color: #0a0a0a;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2118;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8c501e;
+}
+
+/* Subtle warm grid used behind the hero */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(240 232 216 / 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(240 232 216 / 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 30%, transparent 75%);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-24px);
+  }
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
